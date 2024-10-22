@@ -23,12 +23,17 @@ st.markdown("<h1 style='color: #f58d44 ;'>Analyzing an uber Dataset</h1>", unsaf
 with st.sidebar:
     st.write("This page is for a previous data visualization project I realized where the goal was to manipulate some Uber Data.")
     st.write("Where you can find me :")
-    st.image("./images/logo_linkedin.png")
+    
+    logo_path = os.path.join(current_dir, "images", "logo_linkedin.png")
+    st.image(logo_path)
     url_linkedin = "www.linkedin.com/in/enzo-rivière-a55b07221"
     st.markdown("[Find me on Linkedin !](%s)"%url_linkedin)
-    st.image("./images/github_logo.png")
+    
+    logo_path = os.path.join(current_dir, "images", "github_logo.png")
+    st.image(logo_path)
     url_github = "https://github.com/Enzo-Riviere"
     st.markdown("[Find me on GitHub !](%s)"%url_github)
+    
     st.write("Or contact me on my email adress :")
     st.write("enzo.riviere@efrei.net")
 
