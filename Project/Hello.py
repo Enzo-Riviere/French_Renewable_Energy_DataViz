@@ -22,18 +22,26 @@ st.markdown("<h1 style='color: #5d91bf;'>Some information about myself</h1>", un
 st.write("Hi ! My name is Enzo Rivière, and I am in the first year of my master's degree at EFREI Paris, pursuing a degree in data engineering with an expected graduation in 2026.")
 st.write("If you want to learn more about me, you can check that below ! :point_down:")
 
+# Get the current directory
+current_dir = os.path.dirname(__file__)
+
 with st.sidebar:
     st.write("Hello ! :wave:")
     st.write("In this app, you will be able to learn about me, discover some of my works\
              on two uber datasets and on a dataset about renewable energies in Frances,\
             we will manipulate and analyze them to create my first Dashboard !")
     st.write("Where you can find me :")
-    st.image("./images/logo_linkedin.png")
+    
+    logo_path = os.path.join(current_dir, "images", "logo_linkedin.png")
+    st.image(logo_path)
     url_linkedin = "www.linkedin.com/in/enzo-rivière-a55b07221"
     st.markdown("[Find me on Linkedin !](%s)"%url_linkedin)
-    st.image("./images/github_logo.png")
+    
+    logo_path = os.path.join(current_dir, "images", "github_logo.png")
+    st.image(logo_path)
     url_github = "https://github.com/Enzo-Riviere"
     st.markdown("[Find me on GitHub !](%s)"%url_github)
+    
     st.write("Or contact me on my email adress :")
     st.write("enzo.riviere@efrei.net")
     
@@ -62,8 +70,9 @@ with col1:
                 ''')
                 
     st.write("If you want more information, you can download my resume :")
-            
-    with open("./images/CV_Enzo_Riviere.pdf", "rb") as file:
+
+    cv_path = os.path.join(current_dir, "images", "CV_Enzo_Riviere.pdf")
+    with open(cv_path, "rb") as file:
         st.download_button(
             label="Download Resume",
             data=file,
