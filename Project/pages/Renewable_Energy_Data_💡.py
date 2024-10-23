@@ -42,7 +42,8 @@ with st.sidebar:
     st.write("Or contact me on my email adress :")
     st.write("enzo.riviere@efrei.net")
 
-st.image("./images/energias.jpg")
+banner_path = os.path.join(current_dir, "../images", "energias.jpg")
+st.image(banner_path)
 
 st.markdown("<h1 style='color: #81d839;'>Analizing the French Regional Production of Renawable Energy</h1>", unsafe_allow_html=True)
 
