@@ -29,18 +29,24 @@ The global shift toward renewable energy makes it crucial to understand producti
 
 ### Requirements
 
-1. **Python 3.7+** must be installed on your machine.
-2. You may have to install the missingno library :
-    !pip install missingno
+If you download directly the project, you need to be sure to have  the requirements :
 
-The project uses the following key libraries:
+1. **Python 3.7+** must be installed on your machine.
+2. Install the required libraries by running the following command:
+   ```bash
+   pip install -r requirements.txt
+   ```
+But you can also simply explore my portfolio with just a click :
+https://datavisualization-reg-ren-energies-portfolio.streamlit.app/
+
+### The project uses the following key libraries:
 
 - pandas: For data manipulation and analysis.
 - matplotlib & plotly: For data visualization.
 - Streamlit: To create the interactive dashboard.
 
-Navigating the Project
-The dashboard consists of the following main sections:
+## Navigating the Project
+### The dashboard consists of the following main sections:
 
 1. Understanding the Dataset: Provides an overview of the dataset.
 2. Handling data problems: Looking for the errors in the dataset and how to correct them.
@@ -48,7 +54,9 @@ The dashboard consists of the following main sections:
 4. Regional Insights: Explore the production of renewable energy across different regions of France and identify which regions contribute the most.
 5. Map Visualization: Interactive map showing the production of renewable energy across France. Users can select specific years and energy types.
 
-Interactive Features:
+### Interactive Features:
 - Filters: Users can filter the data by year, energy type, and region.
 - Map Visualization: Displays an interactive map where each region is highlighted based on energy production.
 - Time-Based Analysis: View the evolution of energy production over time using animated charts and histograms.
+
+## Have fun browsing through my portfolio !
