@@ -14,6 +14,9 @@ import plotly.figure_factory as ff
 import missingno as msno
 import json
 
+# Get the current directory
+current_dir = os.path.dirname(__file__)
+
 path = 'Datasets/prod-region-annuelle-enr.csv'
 
 st.set_page_config(
@@ -24,12 +27,17 @@ st.set_page_config(
 with st.sidebar:
     st.write("This is my main data visualization project. The goal of this project is to manipulate and analyze the production of renewable energy in France to understand production trends and regional differences.")
     st.write("Where you can find me :")
-    st.image("./images/logo_linkedin.png")
+    
+    logo_path = os.path.join(current_dir, "images", "logo_linkedin.png")
+    st.image(logo_path)
     url_linkedin = "www.linkedin.com/in/enzo-rivière-a55b07221"
     st.markdown("[Find me on Linkedin !](%s)"%url_linkedin)
-    st.image("./images/github_logo.png")
+    
+    logo_path = os.path.join(current_dir, "images", "github_logo.png")
+    st.image(logo_path)
     url_github = "https://github.com/Enzo-Riviere"
     st.markdown("[Find me on GitHub !](%s)"%url_github)
+    
     st.write("Or contact me on my email adress :")
     st.write("enzo.riviere@efrei.net")
 
