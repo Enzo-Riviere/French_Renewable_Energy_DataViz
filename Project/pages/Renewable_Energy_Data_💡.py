@@ -18,7 +18,7 @@ import os
 # Get the current directory
 current_dir = os.path.dirname(__file__)
 
-path = 'Datasets/prod-region-annuelle-enr.csv'
+csv_path = os.path.join(current_dir, "../Datasets", "prod-region-annuelle-enr.csv")
 
 st.set_page_config(
     page_title="Renewable Energy Data",
