@@ -17,6 +17,7 @@ import plotly.figure_factory as ff
 #If you do not have missingno you need to : !pip install missingno
 import missingno as msno
 import json
+import os
 
 st.markdown("<h1 style='color: #f58d44 ;'>Analyzing an uber Dataset</h1>", unsafe_allow_html=True)
 
