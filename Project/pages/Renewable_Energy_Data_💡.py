@@ -62,7 +62,7 @@ with st.expander("Understanding the dataset"):
     st.write("First let's take a look at our dataset :")
     
     
-    data = pd.read_csv(path, delimiter = ';')
+    data = pd.read_csv(csv_path, delimiter = ';')
     st.write(data.head())
     
     st.write("The shape of our dataset is : ", data.shape)
