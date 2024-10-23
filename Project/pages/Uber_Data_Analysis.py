@@ -33,7 +33,7 @@ with st.sidebar:
     url_linkedin = "www.linkedin.com/in/enzo-rivière-a55b07221"
     st.markdown("[Find me on Linkedin !](%s)"%url_linkedin)
     
-    logo_path = os.path.join(current_dir, "images", "github_logo.png")
+    logo_path = os.path.join(current_dir, "../images", "github_logo.png")
     st.image(logo_path)
     url_github = "https://github.com/Enzo-Riviere"
     st.markdown("[Find me on GitHub !](%s)"%url_github)
