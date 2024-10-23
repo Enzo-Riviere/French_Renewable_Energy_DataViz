@@ -28,7 +28,7 @@ with st.sidebar:
     st.write("This page is for a previous data visualization project I realized where the goal was to manipulate some Uber Data.")
     st.write("Where you can find me :")
     
-    logo_path = os.path.join(current_dir, "images", "logo_linkedin.png")
+    logo_path = os.path.join(current_dir, "../images", "logo_linkedin.png")
     st.image(logo_path)
     url_linkedin = "www.linkedin.com/in/enzo-rivière-a55b07221"
     st.markdown("[Find me on Linkedin !](%s)"%url_linkedin)
