@@ -25,6 +25,7 @@ st.set_page_config(
     page_icon="💡"
     )
 
+#What we put in the sidebar
 with st.sidebar:
     st.write("This is my main data visualization project. The goal of this project is to manipulate and analyze the production of renewable energy in France to understand production trends and regional differences.")
     st.write("Where you can find me :")
@@ -45,6 +46,7 @@ with st.sidebar:
 banner_path = os.path.join(current_dir, "../images", "energias.jpg")
 st.image(banner_path)
 
+#Introduction
 st.markdown("<h1 style='color: #81d839;'>Analizing the French Regional Production of Renawable Energy</h1>", unsafe_allow_html=True)
 
 st.write("The global shift toward renewable energy makes it crucial to understand production trends and regional differences.\
@@ -55,7 +57,7 @@ st.write("The global shift toward renewable energy makes it crucial to understan
 st.write("This is why on this page, we will take a look at the regional production of renewable energies in France dataset.\
          We will understand the dataset, handle the missing values or wrong datatypes and manipulate our data to visualize and understand better what are working with.")
 
-
+#First part : understanding the dataset
 with st.expander("Understanding the dataset"):
     st.markdown("<h2 style='color: #78b049;'>Understanding the dataset :</h2>", unsafe_allow_html=True)
              
@@ -82,6 +84,7 @@ with st.expander("Understanding the dataset"):
                 - We also have two last columns **"geo_shape_region"** and **"geo_point_region"**, two categories that are coordinates, for the first one to plot a map with the regions colored and the other one to plot a map with a point in these regions.
                     ''')
 
+#Second part : Handling the problems
 with st.expander("Handling data problems"):
     st.markdown("<h2 style='color: #78b049;'>Handling data problems :</h2>", unsafe_allow_html=True)
     
@@ -109,11 +112,11 @@ with st.expander("Handling data problems"):
     ax.set_ylabel("Number of non missing values")
     st.pyplot(fig)
     st.write("Our data is now complete and ready to use !")
-
+#Third part : starting to manipulate and visualize the data
 with st.expander("Manipulating the data"):
     st.markdown("<h2 style='color: #78b049;'>Manipulating the data :</h2>", unsafe_allow_html=True)
     
-    
+    #Analysis on the different types of energies
     st.markdown("<h3 style='color: #a0cb7c;'>Observing the evolution of the different renewable energies over the year</h3>", unsafe_allow_html=True)
     
     
@@ -148,7 +151,7 @@ with st.expander("Manipulating the data"):
     st.write("We can observe that for some type energies, there are regions that seems to have their specialties.\
              For example, Auvergne Rhône Alpes is a major provider of hydraulic energy compared to other regions.")
     
-    
+    #Analysing the evolution of the renewable energies
     st.markdown("<h3 style='color: #a0cb7c;'>Observing the evolution of the total renewable energies over the year :</h3>", unsafe_allow_html=True)
     
     
@@ -184,11 +187,11 @@ with st.expander("Manipulating the data"):
     fig = px.bar(data, x="annee", y="production_totale_renouvelable", color = "nom_insee_region")
     event = st.plotly_chart(fig, on_select="rerun")
     
-    #Transition vers après avec comparaison
     st.write("We can see that even on the total production, Auvergne Rhône Alpes stays the region producing the most.")
     st.write("Thanks to pyplot we were able to have a first look at how different regions contribute to the production of renewable energies. \
                  But it can be interesting to study more in detail the comparison between regions.")
-    
+
+    #Region comparison
     st.markdown("<h3 style='color: #a0cb7c;'>Overview region comparison :</h3>", unsafe_allow_html=True)
     
     
@@ -198,7 +201,8 @@ with st.expander("Manipulating the data"):
     event = st.plotly_chart(fig, on_select="rerun", key="line_compare")
     
     st.write("Analizing the total production of each regions over the years on a line plot, make us realize how the Auvergne Rhône Alpes region is above all the other region, no matter the year.")
-    
+
+    #Going in details for each regions
     st.markdown("<h3 style='color: #a0cb7c;'>Comparing regions in more details</h3>", unsafe_allow_html=True)
     
     st.write("A thing that we can do to compare regions, is to analyze them for each year. So you will have to select which year you want to analyze :")
@@ -278,8 +282,9 @@ with st.expander("Manipulating the data"):
     event = st.plotly_chart(fig, on_select="rerun")
     
     st.write("Each time we can observe that throughout the years, there is a real diversification of the renewable energies produced nowadays.")
-    
-    st.markdown("<h3 style='color: #a0cb7c;'>Geographic representations :</h3>", unsafe_allow_html=True)
+
+    #Map representations
+    st.markdown("<h3 style='color: #a0cb7c;'>Geographical representations :</h3>", unsafe_allow_html=True)
     
     st.write("To plot our geographical data, we will use the 'geo_point_region' column but we need to separate it in two columns 'lat' and 'lon'.")
     
@@ -325,7 +330,7 @@ with st.expander("Manipulating the data"):
                 - After that, we were able to observe the the diversification in each regions of the way of producing renewable energies.
                 - Finaly, we analized geographically the evolution of the total renewable energy produced in each region over the years and realized that the places where there was a real growth were the least producing regions that produced more and more.
                     ''')
-#Déjà développés développe pas temps mais claire démocratisation chez ceux qui étaient pas prod avant
+#What to do in the future
 with st.expander("To go further..."):
     st.markdown("<h2 style='color: #78b049;'>To go further...</h2>", unsafe_allow_html=True)
     st.write("I also wanted to try to analyze and compare the greenhouse gas emissions of each region in France to see if there was a link between the regions that produces the most renewable energies, and the regions emitting less greenhouse gas.")
