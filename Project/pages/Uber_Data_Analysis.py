@@ -20,6 +20,9 @@ import json
 
 st.markdown("<h1 style='color: #f58d44 ;'>Analyzing an uber Dataset</h1>", unsafe_allow_html=True)
 
+# Get the current directory
+current_dir = os.path.dirname(__file__)
+
 with st.sidebar:
     st.write("This page is for a previous data visualization project I realized where the goal was to manipulate some Uber Data.")
     st.write("Where you can find me :")
